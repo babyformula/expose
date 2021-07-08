@@ -380,10 +380,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=arg_formatter,
                                      description=description)
 
-    parser.add_argument('--exp-cfg', type=str, dest='exp_cfg',
+    parser.add_argument('--exp-cfg', type=str, dest='exp_cfg', default='data/conf.yaml',
                         help='The configuration of the experiment')
     parser.add_argument('--output-folder', dest='output_folder',
-                        default='demo_output', type=str,
+                        default='results', type=str,
                         help='The folder where the demo renderings will be' +
                         ' saved')
     parser.add_argument('--datasets', nargs='+',
@@ -401,13 +401,13 @@ if __name__ == '__main__':
                         help='Focal length')
     parser.add_argument('--degrees', type=float, nargs='*', default=[],
                         help='Degrees of rotation around the vertical axis')
-    parser.add_argument('--save-vis', dest='save_vis', default=False,
+    parser.add_argument('--save-vis', dest='save_vis', default=True,
                         type=lambda x: x.lower() in ['true'],
                         help='Whether to save visualizations')
-    parser.add_argument('--save-mesh', dest='save_mesh', default=False,
+    parser.add_argument('--save-mesh', dest='save_mesh', default=True,
                         type=lambda x: x.lower() in ['true'],
                         help='Whether to save meshes')
-    parser.add_argument('--save-params', dest='save_params', default=False,
+    parser.add_argument('--save-params', dest='save_params', default=True,
                         type=lambda x: x.lower() in ['true'],
                         help='Whether to save parameters')
 
