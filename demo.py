@@ -485,7 +485,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=arg_formatter,
                                      description=description)
 
-    parser.add_argument('--image-folder', type=str, dest='image_folder', default='sample',
+    parser.add_argument('--image-folder', type=str, dest='image_folder', default='samples',
                         help='The folder with images that will be processed')
     parser.add_argument('--exp-cfg', type=str, dest='exp_cfg', default='data/conf.yaml',
                         help='The configuration of the experiment')
